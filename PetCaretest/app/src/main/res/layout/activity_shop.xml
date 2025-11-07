@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopActivity"
+    android:background="#FFFFFF">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Top Bar -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:weightSum="10">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/baseline_arrow_back_24"
+                    android:contentDescription="Back" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="Shop"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/btnWishlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wishlist"
+                    android:background="@drawable/rounded_border"
+                    android:textColor="#3E2723"
+                    android:paddingHorizontal="10dp"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/btnCart"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_cart"
+                    android:contentDescription="Cart"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Search Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/round_box"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="12dp">
+
+                <EditText
+                    android:id="@+id/searchBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Search..."
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:padding="4dp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_search"
+                    android:contentDescription="Search" />
+            </LinearLayout>
+
+            <!-- Tabs -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tabFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feed"
+                    android:textColor="#E65100"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="16dp" />
+
+                <TextView
+                    android:id="@+id/tabYou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You"
+                    android:textColor="#999999"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Pet Categories -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <!-- Category: All -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_all"
+                            android:background="@drawable/category_bg"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="All"
+                            android:textSize="12sp"
+                            android:layout_marginTop="4dp"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <!-- Category: Dog -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_dog"
+                            android:background="@drawable/category_bg"
+                            android:padding="10dp" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Dog"
+                            android:textSize="12sp"
+                            android:layout_marginTop="4dp"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                    <!-- Category: Cat -->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_cat"
+                            android:background="@drawable/category_bg"
+                            android:padding="10dp" />
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Cat"
+                            android:textSize="12sp"
+                            android:layout_marginTop="4dp"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Product Section -->
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Pet Food"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="24dp" />
+
+            <GridLayout
+                android:id="@+id/productGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginTop="12dp">
+
+                <!-- Product 1 -->
+                <LinearLayout
+                    android:id="@+id/petlacCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/product_card_bg"
+                    android:padding="8dp"
+                    android:layout_margin="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/petlac"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="PetLac Milk Powder for Kittens"
+                        android:textSize="14sp"
+                        android:textColor="#000"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="₹1,900.00"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- Product 2 -->
+                <LinearLayout
+                    android:id="@+id/drClauderCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/product_card_bg"
+                    android:padding="8dp"
+                    android:layout_margin="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/dr_clauder"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Dr Clauders Whelpnmilk 450gm"
+                        android:textSize="14sp"
+                        android:textColor="#000"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="₹1,755.00"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- Product 3 -->
+                <LinearLayout
+                    android:id="@+id/beapharCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/product_card_bg"
+                    android:padding="8dp"
+                    android:layout_margin="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/tablets"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Beaphar Kalk Calcium Tablets"
+                        android:textSize="14sp"
+                        android:textColor="#000"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="₹1,288.00"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- Product 4 -->
+                <LinearLayout
+                    android:id="@+id/myBeauCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/product_card_bg"
+                    android:padding="8dp"
+                    android:layout_margin="4dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/vitamin"
+                        android:scaleType="fitCenter" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="My Beau Vitamin Mineral Supplements"
+                        android:textSize="14sp"
+                        android:textColor="#000"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="₹1,080.00"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#000"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/bottom_nav_buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

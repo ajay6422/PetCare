@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ServiceCardStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">160dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/service_card_background</item>
+    </style>
+
+    <style name="ServiceTextStyle">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#3E3E3E</item>
+    </style>
+
+</resources>

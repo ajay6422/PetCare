@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".ProductDetails">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/category_bg"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Product Details"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_cart"
+            android:contentDescription="Cart"
+            app:tint="#F9A825" />
+    </LinearLayout>
+
+    <!-- Product Image Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#FFD9D4"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/dr_clauder"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <!-- Product Info -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Product Title -->
+            <TextView
+                android:id="@+id/productTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dr Clauders Whelpnmilk 450gm"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="₹1,755.00"
+                android:textColor="#F9A825"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Description Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/productDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Premium milk replacer for newborn and orphaned puppies. Supports growth, immunity, and strength with a formula similar to mother’s milk. Highly digestible and enriched with calcium and omega nutrients."
+                android:textColor="#444444"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Categories -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Categories  :  Vitamins/ Supplements"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:layout_marginTop="16dp" />
+
+            <!-- Additional Information -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Additional Information"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp" />
+
+            <!-- Seller Name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seller Name : My Pet World India"
+                android:textColor="#F9A825"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Action Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="6dp"
+        android:padding="8dp"
+        android:gravity="center">
+
+        <!-- Share -->
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/category_bg"
+            android:padding="10dp"
+            android:src="@drawable/ic_share"
+            android:contentDescription="Share"
+            app:tint="#F9A825" />
+
+        <!-- Wishlist -->
+        <ImageButton
+            android:id="@+id/btnWishlist"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/category_bg"
+            android:padding="10dp"
+            android:src="@drawable/ic_heart"
+            android:layout_marginStart="8dp"
+            android:contentDescription="Wishlist"
+            app:tint="#F9A825" />
+
+        <!-- Add to Cart -->
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Add to cart"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#F9A825"
+            android:layout_marginStart="12dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
